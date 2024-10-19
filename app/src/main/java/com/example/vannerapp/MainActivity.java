@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     } else {
                         Log.e("Auth", "Error en la autenticación :(");
+                        Toast.makeText(MainActivity.this, "Error en la autenticación, ingrese sus datos correctamente :(", Toast.LENGTH_SHORT).show();
+
                     }
                 });
     }
