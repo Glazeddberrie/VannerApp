@@ -1,2 +1,0 @@
-# VannerApp
-raul chupalo
