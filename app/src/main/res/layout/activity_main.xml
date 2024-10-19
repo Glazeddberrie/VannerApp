@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txt_log_email"
+        android:layout_width="235dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Ingrese su correo"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/txt_log_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.815"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txt_log_pass"
+        android:layout_width="234dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="Ingrese su Contraseña"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/login_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/login_start"
+        android:layout_width="288dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="452dp"
+        android:backgroundTint="#327A99"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ingresar a Vanner"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="241dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#327A99"
+        android:fontFamily="sans-serif-medium"
+        android:text="Registrate en Vanner"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_start" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="414dp"
+        android:layout_height="189dp"
+        app:srcCompat="@drawable/circuloinicio"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

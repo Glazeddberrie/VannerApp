@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "582166834414",
+    "project_id": "vannerapp",
+    "storage_bucket": "vannerapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582166834414:android:ef48a62c814407a51b97ff",
+        "android_client_info": {
+          "package_name": "com.example.vannerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZQuKUq_MbWQbtXFizEIYPNmhQs3zjac0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
