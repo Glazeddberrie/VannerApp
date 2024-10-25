@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">VannerApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Buscar</string>
+    <string name="menu_gallery">Crear</string>
+    <string name="menu_slideshow">Eliminar</string>
+    <string name="menu_update">Actualizar</string>
+    <string name="crear">Crear</string>
+    <string name="leer">Leer</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="bienvenido_a_vanner">Bienvenido a Vanner</string>
+    <string name="correo_admin">-correo admin-</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

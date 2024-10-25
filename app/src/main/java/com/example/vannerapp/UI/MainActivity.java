@@ -1,4 +1,4 @@
-package com.example.vannerapp;
+package com.example.vannerapp.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.vannerapp.R;
+import com.example.vannerapp.UI.UserDash.Home;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

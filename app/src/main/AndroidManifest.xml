@@ -13,7 +13,7 @@
         android:theme="@style/Theme.VannerApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
-        <activity android:name=".Register" />
+        <activity android:name=".UI.UserDash.Home" />
+        <activity android:name=".UI.Register" />
+        <activity android:name=".UI.AdminDash.Create.CrearFragment" />
+        <activity android:name=".UI.AdminDash.Delete.eliminarFragment" />
+        <activity android:name=".UI.AdminDash.Read.LeerFragment" />
+        <activity android:name=".UI.AdminDash.Update.UpdateFragment" />
     </application>
 
 </manifest>
