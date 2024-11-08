@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/regvolver_btn"
+        android:layout_width="233dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#327A99"
+        android:fontFamily="sans-serif-medium"
+        android:text="Volver"
+        android:textColor="#FFFCF2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrar_btn"
+        app:layout_constraintVertical_bias="0.255"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pass_txt"
+        android:layout_width="310dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="#252422"
+        app:layout_constraintBottom_toTopOf="@+id/pass_confirm_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mail_txt"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/mail_txt"
+        android:layout_width="310dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="231dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#752B81"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="#252422"
+        app:layout_constraintBottom_toTopOf="@+id/pass_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pass_confirm_txt"
+        android:layout_width="310dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#752B81"
+        android:hint="Confirmar Contraseña"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="#252422"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_txt"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/registrar_btn"
+        android:layout_width="247dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="141dp"
+        android:backgroundTint="#327A99"
+        android:fontFamily="sans-serif-medium"
+        android:text="Registrar"
+        android:textColor="#FFFCF2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="409dp"
+        android:layout_height="239dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="si"
+        app:layout_constraintBottom_toTopOf="@+id/mail_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circuloej" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

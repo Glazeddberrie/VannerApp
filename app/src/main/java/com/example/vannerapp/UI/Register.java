@@ -60,6 +60,7 @@ public class Register extends AppCompatActivity {
         volverBtn.setOnClickListener(v -> {
             Intent intent = new Intent(Register.this, MainActivity.class);
             startActivity(intent);
+            finish();
         });
 
     }
@@ -74,9 +75,10 @@ public class Register extends AppCompatActivity {
 
                             Intent intent = new Intent(Register.this, MainActivity.class);
                             startActivity(intent);
+                            finish();
                         } else {
                             Log.w("AUTH", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(Register.this, "Este correo ya está en uso.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "Ha ocurrido un error al registrarse.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

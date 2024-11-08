@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/crear"
+            android:title="Gestionar ofertas" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/buscar"
+            android:title="Previsualizar perfil" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/actualizar"
+            android:title="Editar perfil" />
+
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+        <item android:title="">
+
+        </item>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/common_full_open_on_phone"
+            android:title="Cerrar sesion" />
+    </group>
+</menu>

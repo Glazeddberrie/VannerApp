@@ -17,4 +17,5 @@
     <string name="bienvenido_a_vanner">Bienvenido a Vanner</string>
     <string name="correo_admin">-correo admin-</string>
     <string name="eliminar">Eliminar</string>
+    <string name="title_activity_nav">activity_nav</string>
 </resources>

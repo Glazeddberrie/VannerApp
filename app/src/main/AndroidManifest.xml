@@ -6,9 +6,10 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:enableOnBackInvokedCallback="true"
+        android:icon="@drawable/gtalogo3_1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/gtalogo3_1"
         android:supportsRtl="true"
         android:theme="@style/Theme.VannerApp"
         tools:targetApi="31">
@@ -22,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".UI.UserDash.Home" />
+        <activity android:name=".UI.UserDash.Perfil" />
+        <activity android:name=".UI.UserDash.Offers" />
+        <activity android:name=".UI.UserDash.ModPerfil" />
         <activity android:name=".UI.Register" />
-        <activity android:name=".UI.AdminDash.Create.CrearFragment" />
-        <activity android:name=".UI.AdminDash.Delete.eliminarFragment" />
-        <activity android:name=".UI.AdminDash.Read.LeerFragment" />
-        <activity android:name=".UI.AdminDash.Update.UpdateFragment" />
+
     </application>
 
 </manifest>

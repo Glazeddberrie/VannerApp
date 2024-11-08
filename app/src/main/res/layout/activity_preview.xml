@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VISTA PREVIA DE SU PERFIL"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imagen_trabajador"
+        android:layout_width="290dp"
+        android:layout_height="415dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/suaso" />
+
+    <TextView
+        android:id="@+id/nombre_trabajador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagen_trabajador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Chupete Suazo"
+        android:textColor="#333333"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descripcion_trabajador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre_trabajador"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="Humberto Andrés Suazo Pontigo (San Antonio, Valparaíso; 10 de mayo de 1981) es un futbolista chileno que juega como delantero en San Luis de la Primera B de Chile. Anotó 21 goles en la selección chilena en 60 partidos (15 tantos oficiales y 6 en amistosos)"
+        android:textColor="#666666"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/btns_inferior"
+        android:layout_width="293dp"
+        android:layout_height="77dp"
+        android:layout_below="@id/descripcion_trabajador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_volver"
+            android:layout_width="269dp"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:textColorLink="#327A99"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

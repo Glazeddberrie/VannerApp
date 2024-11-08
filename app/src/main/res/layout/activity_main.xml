@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/txt_log_email"
-        android:layout_width="235dp"
-        android:layout_height="50dp"
+        android:layout_width="256dp"
+        android:layout_height="65dp"
         android:ems="10"
         android:hint="Ingrese su correo"
         android:textAlignment="center"
@@ -24,11 +24,12 @@
 
     <EditText
         android:id="@+id/txt_log_pass"
-        android:layout_width="234dp"
-        android:layout_height="47dp"
+        android:layout_width="256dp"
+        android:layout_height="65dp"
         android:layout_marginBottom="60dp"
         android:ems="10"
         android:hint="Ingrese su Contraseña"
+        android:password="true"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/login_start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +40,7 @@
     <Button
         android:id="@+id/login_start"
         android:layout_width="288dp"
-        android:layout_height="75dp"
+        android:layout_height="80dp"
         android:layout_marginTop="452dp"
         android:backgroundTint="#327A99"
         android:fontFamily="sans-serif-medium"

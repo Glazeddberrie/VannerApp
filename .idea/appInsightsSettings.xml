@@ -9,7 +9,7 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.vannerapp" />
-                  <option name="mobileSdkAppId" value="1:582166834414:android:ef48a62c814407a51b97ff" />
+                  <option name="mobileSdkAppId" value="1:582166834414:android:b0812dc5d0e23e7d1b97ff" />
                   <option name="projectId" value="vannerapp" />
                   <option name="projectNumber" value="582166834414" />
                 </ConnectionSetting>
