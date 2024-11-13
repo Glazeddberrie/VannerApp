@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txt_nombreEmpresa"
+        android:layout_width="294dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="572dp"
+        android:ems="10"
+        android:hint="nombre empresa"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_rutEmpresa"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/txt_rutEmpresa" />
+
+    <EditText
+        android:id="@+id/txt_telefonoEmpresa"
+        android:layout_width="294dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="260dp"
+        android:ems="10"
+        android:hint="telefono"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_rutEmpresa"
+        android:layout_width="298dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="504dp"
+        android:ems="10"
+        android:hint="rut empresa"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_emailEmpresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_emailEmpresa" />
+
+    <Button
+        android:id="@+id/btn_crearEmpresa"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="700dp"
+        android:text="Crear"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_confirmarContraEmpresa"
+        android:layout_width="294dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="312dp"
+        android:ems="10"
+        android:hint="confirmar contraseña"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_telefonoEmpresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_telefonoEmpresa" />
+
+    <EditText
+        android:id="@+id/txt_contraEmpresa"
+        android:layout_width="296dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="376dp"
+        android:ems="10"
+        android:hint="contraseña"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_confirmarContraEmpresa"
+        app:layout_constraintStart_toStartOf="@+id/txt_confirmarContraEmpresa" />
+
+    <EditText
+        android:id="@+id/txt_emailEmpresa"
+        android:layout_width="296dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="436dp"
+        android:ems="10"
+        android:hint="mail empresa"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_contraEmpresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_contraEmpresa" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="403dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="196dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Crear anuncio"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="411dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="548dp"
+        android:contentDescription="si"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/circulo_admin" />
+
+    <Button
+        android:id="@+id/btn_volverEmpresa"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="84dp"
+        android:text="Volver"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

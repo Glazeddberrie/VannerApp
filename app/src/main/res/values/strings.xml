@@ -18,4 +18,5 @@
     <string name="correo_admin">-correo admin-</string>
     <string name="eliminar">Eliminar</string>
     <string name="title_activity_nav">activity_nav</string>
+    <string name="error_en_la_autenticaci_n_ingrese_sus_datos_correctamente">Error en la autenticación, ingrese sus datos correctamente</string>
 </resources>

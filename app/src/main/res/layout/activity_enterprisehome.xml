@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enterprisehome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="408dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="389dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_notificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/circulolast"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/vanner_cl"
+        android:layout_width="407dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="493dp"
+        android:text="Bienvenido, vanner@.cl"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.163"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_perfil"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="65dp"
+        android:text="Perfil"
+        app:icon="@drawable/iconoperfil"
+        app:layout_constraintBottom_toTopOf="@+id/btn_enterprise_crear"
+        app:layout_constraintEnd_toStartOf="@+id/btn_notificaciones"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_notificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="66dp"
+        android:text="Notificaciones"
+        app:icon="@drawable/bell"
+        app:layout_constraintBottom_toTopOf="@+id/btn_enterprise_crear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/btn_enterprise_crear"
+        android:layout_width="229dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="166dp"
+        android:text="Crear anuncio"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_enterprise_manage"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notificaciones" />
+
+    <Button
+        android:id="@+id/btn_enterprise_manage"
+        android:layout_width="223dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="68dp"
+        android:text="Administrar anuncios"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

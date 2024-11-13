@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -53,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void signIn(String email, String password) {
+
+        EditText log_email = findViewById(R.id.txt_log_email);
+        EditText log_pass = findViewById(R.id.txt_log_pass);
+        TextView error = findViewById(R.id.text_errorfield);
+
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -64,11 +70,14 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(MainActivity.this, Home.class);
                             intent.putExtra("USER_EMAIL", email);
                             startActivity(intent);
+                            error.setText("");
+                            log_email.setText("");
+                            log_pass.setText("");
                         }
                     } else {
                         Log.e("Auth", "Error en la autenticación :(");
-                        Toast.makeText(MainActivity.this, "Error en la autenticación, ingrese sus datos correctamente :(", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(MainActivity.this, "Error en la autenticación, ingrese sus datos correctamente", Toast.LENGTH_SHORT).show();
+                        error.setText("Error en la autenticación, ingrese sus datos correctamente");
                     }
                 });
     }

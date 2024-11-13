@@ -7,144 +7,81 @@
     android:layout_height="match_parent">
 
 
-    <Button
-        android:id="@+id/btn_clientes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="#327A99"
-        android:fontFamily="sans-serif-medium"
-        android:text="Previsualizar perfil"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_perfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_entrenadores"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_entrenadores"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#327A99"
-        android:fontFamily="sans-serif-medium"
-        android:text="Gestionar mis ofertas"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_clientes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanner_cl"
-        tools:ignore="MissingConstraints" />
-
-
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="106dp"
-        android:backgroundTint="#327A99"
-        android:fontFamily="sans-serif-medium"
-        android:text="Salir"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_perfil"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_perfil"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="129dp"
-        android:backgroundTint="#327A99"
-        android:fontFamily="sans-serif-medium"
-        android:text="Editar perfil"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_logout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_clientes"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="566dp"
-        android:layout_height="209dp"
-        android:layout_marginBottom="559dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
-        app:srcCompat="@drawable/circulolast"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/vanner_cl"
-        android:layout_width="407dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
+        android:layout_width="381dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="205dp"
         android:text="Bienvenido, vanner@.cl"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_entrenadores"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225"
         tools:ignore="MissingConstraints" />
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_offers_ico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#327A99"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bell"
-        app:tint="@color/white" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_perfil_ico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#327A99"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="409dp"
+        android:layout_height="203dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="716dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iconoperfil"
-        app:tint="#FFFFFF" />
+        app:srcCompat="@drawable/circulolast"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="367dp"
+        android:layout_height="470dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_notificaciones" />
+
+    <Button
+        android:id="@+id/btn_notificaciones"
+        android:layout_width="178dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="298dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Notificaciones"
+        app:icon="@drawable/bell"
+        app:layout_constraintStart_toEndOf="@+id/btn_perfil"
+        app:layout_constraintStart_toStartOf="@+id/btn_perfil"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_perfil"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="298dp"
+        android:text="Perfil"
+        app:icon="@drawable/iconoperfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userhome_anchor"
+        android:layout_width="134dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="139dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,11 +7,25 @@
     android:layout_height="match_parent">
 
 
+    <TextView
+        android:id="@+id/text_errorfield2"
+        android:layout_width="312dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="547dp"
+        android:layout_marginEnd="48dp"
+        android:textAlignment="center"
+        android:textColor="#C10000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/regvolver_btn"
         android:layout_width="190dp"
         android:layout_height="50dp"
-        android:backgroundTint="#327A99"
+        android:backgroundTint="@color/green_blue"
         android:fontFamily="sans-serif-medium"
         android:text="Volver"
         android:textColor="#FFFCF2"
@@ -29,6 +43,7 @@
         android:layout_width="309dp"
         android:layout_height="0dp"
         android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/purple_200"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:padding="12dp"
@@ -44,7 +59,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="231dp"
         android:layout_marginBottom="14dp"
-        android:backgroundTint="#752B81"
+        android:backgroundTint="@color/purple_200"
         android:hint="Correo"
         android:inputType="textEmailAddress"
         android:padding="12dp"
@@ -59,13 +74,14 @@
         android:layout_width="311dp"
         android:layout_height="0dp"
         android:layout_marginBottom="74dp"
-        android:backgroundTint="#752B81"
+        android:backgroundTint="@color/purple_200"
         android:hint="Confirmar Contraseña"
         android:inputType="textPassword"
         android:padding="12dp"
         android:textColor="#252422"
         app:layout_constraintBottom_toTopOf="@+id/estoy"
-        app:layout_constraintEnd_toEndOf="@+id/estoy"
+        app:layout_constraintEnd_toEndOf="@+id/text_errorfield2"
+        app:layout_constraintStart_toStartOf="@+id/text_errorfield2"
         app:layout_constraintTop_toBottomOf="@+id/pass_txt"
         tools:ignore="MissingConstraints" />
 
@@ -102,7 +118,7 @@
         android:layout_width="247dp"
         android:layout_height="0dp"
         android:layout_marginBottom="141dp"
-        android:backgroundTint="#327A99"
+        android:backgroundTint="@color/green_blue"
         android:fontFamily="sans-serif-medium"
         android:text="Registrar"
         android:textColor="#FFFCF2"

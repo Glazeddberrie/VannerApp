@@ -22,10 +22,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UI.AdminDash.AdminHome" />
+        <activity android:name=".UI.AdminDash.Create.RegisterAdmin" />
+        <activity android:name=".UI.AdminDash.Create.RegisterEnterprise" />
+        <activity android:name=".UI.AdminDash.Update.UpdateAdmin" />
+        <activity android:name=".UI.AdminDash.Update.UpdateEnterprise" />
+        <activity android:name=".UI.AdminDash.Delete.Delete" />
+        <activity android:name=".UI.AdminDash.Read.Read" />
+
+        <activity android:name=".UI.EnterpriseDash.EnterpriseHome" />
+        <activity android:name=".UI.EnterpriseDash.Create.CreateOffer" />
+        <activity android:name=".UI.EnterpriseDash.Update.EditOffer" />
+        <activity android:name=".UI.EnterpriseDash.Delete.DeleteOffer" />
+
         <activity android:name=".UI.UserDash.Home" />
         <activity android:name=".UI.UserDash.Perfil" />
         <activity android:name=".UI.UserDash.Offers" />
-        <activity android:name=".UI.UserDash.ModPerfil" />
+        <activity android:name=".UI.UserDash.Create.ModPerfilFirst" />
+        <activity android:name=".UI.UserDash.Update.ModPerfil" />
         <activity android:name=".UI.Register" />
 
     </application>

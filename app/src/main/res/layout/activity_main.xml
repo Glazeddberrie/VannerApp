@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/txt_log_email"
-        android:layout_width="256dp"
-        android:layout_height="65dp"
+        android:layout_width="322dp"
+        android:layout_height="64dp"
         android:ems="10"
         android:hint="Ingrese su correo"
         android:textAlignment="center"
@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/txt_log_pass"
-        android:layout_width="256dp"
+        android:layout_width="322dp"
         android:layout_height="65dp"
         android:layout_marginBottom="60dp"
         android:ems="10"
@@ -41,12 +41,13 @@
         android:id="@+id/login_start"
         android:layout_width="288dp"
         android:layout_height="80dp"
-        android:layout_marginTop="452dp"
-        android:backgroundTint="#327A99"
+        android:layout_marginTop="448dp"
+        android:backgroundTint="@color/purple_500"
         android:fontFamily="sans-serif-medium"
         android:text="Ingresar a Vanner"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,14 +55,15 @@
         android:id="@+id/start_button"
         android:layout_width="241dp"
         android:layout_height="62dp"
-        android:backgroundTint="#327A99"
+        android:backgroundTint="@color/green_blue"
         android:fontFamily="sans-serif-medium"
         android:text="Registrate en Vanner"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_start" />
+        app:layout_constraintTop_toBottomOf="@+id/login_start"
+        app:layout_constraintVertical_bias="0.443" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -70,6 +72,21 @@
         app:srcCompat="@drawable/circuloinicio"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="-2dp" />
+
+    <TextView
+        android:id="@+id/text_errorfield"
+        android:layout_width="326dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="center"
+        android:textColor="#C10000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
