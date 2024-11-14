@@ -16,13 +16,15 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.vannerapp.R;
 import com.example.vannerapp.UI.UserDash.Home;
-import com.google.firebase.appcheck.FirebaseAppCheck;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +43,12 @@ public class MainActivity extends AppCompatActivity {
         EditText pass = findViewById(R.id.txt_log_pass);
 
         btnLog.setOnClickListener(v -> {
-            if (!email.getText().toString().trim().isEmpty() || !pass.getText().toString().trim().isEmpty()) {
-                signIn(email.getText().toString().trim(), pass.getText().toString().trim());
-            }else{
+            String emailText = email.getText().toString().trim();
+            String passwordText = pass.getText().toString().trim();
+
+            if (!emailText.isEmpty() && !passwordText.isEmpty()) {
+                signIn(emailText, passwordText);
+            } else {
                 Toast.makeText(MainActivity.this, "Complete los campos correctamente", Toast.LENGTH_SHORT).show();
             }
         });
@@ -53,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-    public void signIn(String email, String password) {
 
+    public void signIn(String email, String password) {
         EditText log_email = findViewById(R.id.txt_log_email);
         EditText log_pass = findViewById(R.id.txt_log_pass);
         TextView error = findViewById(R.id.text_errorfield);
@@ -66,13 +71,9 @@ public class MainActivity extends AppCompatActivity {
                         if (user != null) {
                             String userEmail = user.getEmail();
                             Log.d("Auth", "Usuario autenticado: " + userEmail);
-                            Toast.makeText(MainActivity.this, "Usuario correcto, Bienvenido a Vanner!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, Home.class);
-                            intent.putExtra("USER_EMAIL", email);
-                            startActivity(intent);
-                            error.setText("");
-                            log_email.setText("");
-                            log_pass.setText("");
+
+                            checkIfBanned(userEmail);
+
                         }
                     } else {
                         Log.e("Auth", "Error en la autenticación :(");
@@ -82,4 +83,52 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    private void checkIfBanned(String email) {
+        db.collection("users").whereEqualTo("email", email)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        boolean isBanned = false;
+
+                        for (DocumentSnapshot document : task.getResult()) {
+                            isBanned = document.getBoolean("baneado") != null && document.getBoolean("baneado");
+                        }
+
+                        if (isBanned) {
+                            Toast.makeText(MainActivity.this, "Este usuario está baneado", Toast.LENGTH_SHORT).show();
+                            auth.signOut();
+                        } else {
+                            checkIfCompanyBanned(email);
+                        }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Error al verificar el estado del usuario", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void checkIfCompanyBanned(String email) {
+        db.collection("companies").whereEqualTo("email", email)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        boolean isCompanyBanned = false;
+
+                        for (DocumentSnapshot document : task.getResult()) {
+                            isCompanyBanned = document.getBoolean("baneado") != null && document.getBoolean("baneado");
+                        }
+
+                        if (isCompanyBanned) {
+                            Toast.makeText(MainActivity.this, "Esta empresa está baneada", Toast.LENGTH_SHORT).show();
+                            auth.signOut();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Usuario correcto, Bienvenido a Vanner!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, Home.class);
+                            intent.putExtra("USER_EMAIL", email);
+                            startActivity(intent);
+                        }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Error al verificar el estado de la empresa", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
 }

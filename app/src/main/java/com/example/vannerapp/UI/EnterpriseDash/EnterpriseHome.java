@@ -1,6 +1,9 @@
 package com.example.vannerapp.UI.EnterpriseDash;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +12,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.vannerapp.R;
+import com.example.vannerapp.UI.EnterpriseDash.Create.CreateOffer;
+import com.example.vannerapp.UI.EnterpriseDash.Update.EditOffer;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-public class EnterpriseHome  extends AppCompatActivity {
+public class EnterpriseHome extends AppCompatActivity {
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -21,6 +32,41 @@ public class EnterpriseHome  extends AppCompatActivity {
             return insets;
         });
 
+        Intent intent = getIntent();
+        String email = intent.getStringExtra("AuthMail");
 
+        Button btnEnterpriseCrear = findViewById(R.id.btn_enterprise_crear);
+        Button btnEnterpriseManage = findViewById(R.id.btn_enterprise_manage);
+
+        db.collection("empresas").whereEqualTo("email", email)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful() && !task.getResult().isEmpty()) {
+                        DocumentSnapshot document = task.getResult().getDocuments().get(0);
+                        String nombreEmpresa = document.getString("nombre");
+
+                        // Listener para el botón "Crear Anuncio"
+                        btnEnterpriseCrear.setOnClickListener(v -> {
+                            Intent createOfferIntent = new Intent(EnterpriseHome.this, CreateOffer.class);
+                            createOfferIntent.putExtra("AuthMail", email);
+                            createOfferIntent.putExtra("nombreEmpresa", nombreEmpresa);
+                            startActivity(createOfferIntent);
+                        });
+
+                        // Listener para el botón "Administrar Empresa"
+                        btnEnterpriseManage.setOnClickListener(v -> {
+                            Intent manageIntent = new Intent(EnterpriseHome.this, EditOffer.class);
+                            manageIntent.putExtra("AuthMail", email);
+                            manageIntent.putExtra("nombreEmpresa", nombreEmpresa);
+                            startActivity(manageIntent);
+                        });
+
+                    } else {
+                        Toast.makeText(this, "No se pudo recuperar el nombre de la empresa", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(this, "Error al recuperar los datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 }

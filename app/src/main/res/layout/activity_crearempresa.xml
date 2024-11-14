@@ -40,9 +40,9 @@
         android:layout_marginTop="664dp"
         android:text="Crear"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_volverEmpresa"
         app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_volverEmpresa"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -91,7 +91,7 @@
         android:id="@+id/btn_volverEmpresa"
         android:layout_width="175dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="116dp"
         android:text="Volver"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -145,8 +145,9 @@
         android:id="@+id/txt_erorresEmpresa"
         android:layout_width="229dp"
         android:layout_height="38dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="235dp" />
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="235dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

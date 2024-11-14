@@ -32,7 +32,7 @@
             android:layout_width="361dp"
             android:layout_height="59dp"
             android:layout_marginTop="728dp"
-            android:backgroundTint="@color/nomuevanestawea"
+            android:backgroundTint="@color/green_blue"
             android:padding="12dp"
             android:text="Actualizar"
             android:textColor="@android:color/white"

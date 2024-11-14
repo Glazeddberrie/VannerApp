@@ -6,139 +6,183 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="504dp"
-        android:layout_height="184dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tituloOferta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/circulolast" />
+    <TextView
+        android:id="@+id/txt_tituloOferta"
+        android:layout_width="385dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Titulo de Anuncio"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="175dp"
+        android:layout_width="391dp"
+        android:layout_height="643dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="147dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tituloOferta">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <!-- Media -->
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="194dp"
+                android:layout_height="170dp"
                 android:contentDescription="wa"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/laburante" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="391dp"
+                android:layout_height="468dp"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
+                <!-- Title, secondary and supporting text -->
+
+                <TextView
+                    android:id="@+id/txt_nombreOferta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:text="Nombre:"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="22sp" />
 
-                    <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:id="@+id/txt_sueldoOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Sueldo esperado:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/txt_nombreOferta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Nombre:"
-                        android:textAppearance="?attr/textAppearanceHeadline6"
-                        android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/txt_experienciaOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Años de experiencia:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/txt_experienciaOferta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Años de experiencia:"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
-                        android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/txt_direccionOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Direccion:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/txt_sueldoOferta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Sueldo esperado:"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
-                        android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/txt_horariosOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Horarios:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txt_tiempoOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tiempo:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txt_vacantesOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vacantes:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txt_detallesOferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Detalles:"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="366dp"
+                    android:layout_height="81dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_aceptarOferta"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="151dp"
+                        android:layout_height="70dp"
+                        android:layout_marginRight="60dp"
+                        android:text="Aceptar oferta"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_rechazarOferta"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="151dp"
+                        android:layout_height="70dp"
+                        android:background="#6DFFFFFF"
+                        android:text="Rechazar oferta"
+                        android:textSize="20sp"
+                        tools:visibility="visible" />
 
                 </LinearLayout>
-            </ScrollView>
+
+            </LinearLayout>
 
             <!-- Buttons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_aceptarOferta"
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="Aceptar oferta"
-                    android:textSize="16sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_rechazarOferta"
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dip"
-                    android:background="#6DFFFFFF"
-                    android:paddingLeft="@dimen/m3_btn_padding_left"
-                    android:text="Rechazar oferta"
-                    android:textSize="16sp"
-                    tools:visibility="visible" />
-            </LinearLayout>
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/txt_tituloOferta"
-        android:layout_width="297dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="12dp"
-        android:text="Titulo de Anuncio"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/card"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
     <Button
         android:id="@+id/button3"
         android:layout_width="200dp"
         android:layout_height="58dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="69dp"
         android:text="Volver"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card" />
 

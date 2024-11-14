@@ -3,14 +3,9 @@ package com.example.vannerapp.UI.AdminDash;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -19,11 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.vannerapp.R;
 import com.example.vannerapp.UI.AdminDash.Create.RegisterAdmin;
 import com.example.vannerapp.UI.AdminDash.Create.RegisterEnterprise;
-import com.example.vannerapp.UI.UserDash.Home;
-import com.example.vannerapp.UI.UserDash.Perfil;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.example.vannerapp.UI.AdminDash.Delete.Delete;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class AdminHome extends AppCompatActivity {
@@ -43,6 +34,15 @@ public class AdminHome extends AppCompatActivity {
 
         Button btnCrearEmpresa = findViewById(R.id.btn_crearempresa);
         Button btnCrearAdmin = findViewById(R.id.btn_crearadmin);
+        Button btnBanear = findViewById(R.id.btn_banearusuario);
+        Button btnVer = findViewById(R.id.btn_verusuario);
+        Button btnVolver = findViewById(R.id.button7);
+
+        btnBanear.setOnClickListener(v -> {
+            Intent intents = new Intent(AdminHome.this, Delete.class);
+            startActivity(intents);
+
+        });
 
         btnCrearAdmin.setOnClickListener(v -> {
             Intent intents = new Intent(AdminHome.this, RegisterAdmin.class);

@@ -25,8 +25,6 @@
         <activity android:name=".UI.AdminDash.AdminHome" />
         <activity android:name=".UI.AdminDash.Create.RegisterAdmin" />
         <activity android:name=".UI.AdminDash.Create.RegisterEnterprise" />
-        <activity android:name=".UI.AdminDash.Update.UpdateAdmin" />
-        <activity android:name=".UI.AdminDash.Update.UpdateEnterprise" />
         <activity android:name=".UI.AdminDash.Delete.Delete" />
         <activity android:name=".UI.AdminDash.Read.Read" />
 

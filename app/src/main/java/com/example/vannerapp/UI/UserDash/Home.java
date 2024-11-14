@@ -44,6 +44,8 @@ public class Home extends AppCompatActivity {
                             if (empresasTask.isSuccessful() && !empresasTask.getResult().isEmpty()) {
                                 onEmailFound("empresas", email);
                                 Intent intent = new Intent(Home.this, EnterpriseHome.class);
+                                intent.putExtra("AuthMail", email);
+
                                 startActivity(intent);
                                 finish();
                             } else {

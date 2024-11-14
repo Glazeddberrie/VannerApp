@@ -35,7 +35,6 @@ public class Offers extends AppCompatActivity {
         String sueldo = intent.getStringExtra("sueldo");
         String empresa = intent.getStringExtra("empresa");
 
-
         TextView txtTitulo = findViewById(R.id.txt_tituloOferta);
         TextView nombreOferta = findViewById(R.id.txt_nombreOferta);
         TextView sueldoOferta = findViewById(R.id.txt_sueldoOferta);
@@ -45,6 +44,7 @@ public class Offers extends AppCompatActivity {
         txtTitulo.setText(descripcion);
         sueldoOferta.setText("Sueldo: " + sueldo);
         nombreOferta.setText("Empresa: " + empresa);
+
 
         validateAnuncio(descripcion, empresa);
     }
@@ -62,23 +62,23 @@ public class Offers extends AppCompatActivity {
 
                             String direccion = document.getString("direccion");
                             TextView direccionOferta = findViewById(R.id.txt_direccionOferta);
-                            experienciaOferta.setText("Dirección: " + direccion);
+                            direccionOferta.setText("Dirección: " + direccion);
 
                             String horarios = document.getString("horarios");
                             TextView horariosOferta = findViewById(R.id.txt_horariosOferta);
-                            experienciaOferta.setText("Horarios: " + horarios);
+                            horariosOferta.setText("Horarios: " + horarios);
 
                             String tiempo = document.getString("tiempo");
                             TextView tiempoOferta = findViewById(R.id.txt_tiempoOferta);
-                            experienciaOferta.setText("Jornada: " + tiempo);
+                            tiempoOferta.setText("Jornada: " + tiempo);
 
                             String vacantes = document.getString("vacantes");
                             TextView vacantesOferta = findViewById(R.id.txt_vacantesOferta);
-                            experienciaOferta.setText("Vacantes: " + vacantes);
+                            vacantesOferta.setText("Vacantes: " + vacantes);
 
-                            String detalles = document.getString("vacantes");
+                            String detalles = document.getString("detalles");
                             TextView detallesOferta = findViewById(R.id.txt_detallesOferta);
-                            experienciaOferta.setText(detalles);
+                            detallesOferta.setText(detalles);
                         }
                     } else {
                         System.out.println("No se encontró un anuncio con estos datos.");
