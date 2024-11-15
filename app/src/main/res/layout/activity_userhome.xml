@@ -7,66 +7,83 @@
     android:layout_height="match_parent">
 
 
+    <Button
+        android:id="@+id/btn_volver"
+        android:layout_width="178dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="788dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="66dp"
+        android:text="Volver"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/vanner_cl"
-        android:layout_width="381dp"
-        android:layout_height="59dp"
+        android:layout_width="388dp"
+        android:layout_height="53dp"
         android:layout_marginTop="205dp"
+        android:gravity="center"
         android:text="Bienvenido, vanner@.cl"
-        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="409dp"
-        android:layout_height="203dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="716dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="406dp"
+        android:layout_height="157dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/circulolast"
         tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="367dp"
-        android:layout_height="470dp"
+        android:layout_width="366dp"
+        android:layout_height="417dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop="351dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="146dp"
+        android:dividerHeight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_notificaciones" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_notificaciones"
         android:layout_width="178dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="298dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="23dp"
         android:fontFamily="sans-serif-medium"
         android:text="Notificaciones"
         app:icon="@drawable/bell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toEndOf="@+id/btn_perfil"
-        app:layout_constraintStart_toStartOf="@+id/btn_perfil"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_perfil"
         android:layout_width="140dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="298dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="272dp"
         android:text="Perfil"
         app:icon="@drawable/iconoperfil"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,9 +94,10 @@
         android:layout_width="134dp"
         android:layout_height="17dp"
         android:layout_marginStart="138dp"
-        android:layout_marginTop="215dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="139dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

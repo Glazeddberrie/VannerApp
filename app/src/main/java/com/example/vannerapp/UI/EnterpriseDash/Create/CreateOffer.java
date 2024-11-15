@@ -100,6 +100,7 @@ public class CreateOffer extends AppCompatActivity {
             db.collection("anuncios").add(anuncioData).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     Toast.makeText(this, "Anuncio creado exitosamente", Toast.LENGTH_SHORT).show();
+                    finish();
                 } else {
                     Toast.makeText(this, "Error al crear el anuncio: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }

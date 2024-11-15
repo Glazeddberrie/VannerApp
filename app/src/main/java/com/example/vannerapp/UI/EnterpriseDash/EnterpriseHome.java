@@ -37,6 +37,9 @@ public class EnterpriseHome extends AppCompatActivity {
 
         Button btnEnterpriseCrear = findViewById(R.id.btn_enterprise_crear);
         Button btnEnterpriseManage = findViewById(R.id.btn_enterprise_manage);
+        Button btnEnterpriseVolver = findViewById(R.id.btn_volver);
+
+        btnEnterpriseVolver.setOnClickListener(v -> finish());
 
         db.collection("empresas").whereEqualTo("email", email)
                 .get()
@@ -45,7 +48,6 @@ public class EnterpriseHome extends AppCompatActivity {
                         DocumentSnapshot document = task.getResult().getDocuments().get(0);
                         String nombreEmpresa = document.getString("nombre");
 
-                        // Listener para el botón "Crear Anuncio"
                         btnEnterpriseCrear.setOnClickListener(v -> {
                             Intent createOfferIntent = new Intent(EnterpriseHome.this, CreateOffer.class);
                             createOfferIntent.putExtra("AuthMail", email);
@@ -53,7 +55,6 @@ public class EnterpriseHome extends AppCompatActivity {
                             startActivity(createOfferIntent);
                         });
 
-                        // Listener para el botón "Administrar Empresa"
                         btnEnterpriseManage.setOnClickListener(v -> {
                             Intent manageIntent = new Intent(EnterpriseHome.this, EditOffer.class);
                             manageIntent.putExtra("AuthMail", email);

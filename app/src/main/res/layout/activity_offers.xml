@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/txt_tituloOferta"
-        android:layout_width="385dp"
-        android:layout_height="74dp"
+        android:layout_width="383dp"
+        android:layout_height="56dp"
         android:layout_marginTop="39dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="sans-serif-medium"
@@ -19,9 +19,10 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/card"
         app:layout_constraintEnd_toEndOf="@+id/card"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="@+id/card"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
@@ -183,7 +184,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card" />
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

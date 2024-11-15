@@ -124,11 +124,15 @@ public class Home extends AppCompatActivity {
         TextView vannerCl = findViewById(R.id.vanner_cl);
         Button btnPerfil = findViewById(R.id.btn_perfil);
 
+        Button btnVolver = findViewById(R.id.btn_volver);
+
         Intent intent = getIntent();
         String email = intent.getStringExtra("USER_EMAIL");
 
         checkEmailInCollections(email);
         vannerCl.setText("Bienvenido, " + email);
+
+        btnVolver.setOnClickListener(v -> finish());
 
         btnPerfil.setOnClickListener(v -> {
             Intent intents = new Intent(Home.this, Perfil.class);

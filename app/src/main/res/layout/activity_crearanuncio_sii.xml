@@ -6,6 +6,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="401dp"
+        android:layout_height="57dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Crear anuncio"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="407dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="548dp"
+        android:contentDescription="si"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/circulo_admin" />
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="400dp"
@@ -198,37 +228,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="183dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:textSize="24sp" />
+
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="401dp"
-        android:layout_height="57dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="1dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Crear anuncio"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="407dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="548dp"
-        android:contentDescription="si"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/circulo_admin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

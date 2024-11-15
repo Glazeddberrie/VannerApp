@@ -7,57 +7,40 @@
     android:layout_height="match_parent">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="403dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="49dp"
+        android:contentDescription="si"
+        app:layout_constraintBottom_toTopOf="@+id/mail_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circuloej" />
+
     <TextView
         android:id="@+id/text_errorfield2"
-        android:layout_width="312dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="547dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="16dp"
         android:textAlignment="center"
         android:textColor="#C10000"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/regvolver_btn"
-        android:layout_width="190dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/green_blue"
-        android:fontFamily="sans-serif-medium"
-        android:text="Volver"
-        android:textColor="#FFFCF2"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrar_btn"
-        app:layout_constraintVertical_bias="0.255"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/pass_txt"
-        android:layout_width="309dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="7dp"
-        android:backgroundTint="@color/purple_200"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:textColor="#252422"
-        app:layout_constraintBottom_toTopOf="@+id/pass_confirm_txt"
-        app:layout_constraintEnd_toEndOf="@+id/pass_confirm_txt"
-        app:layout_constraintTop_toBottomOf="@+id/mail_txt"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_confirm_txt" />
 
     <EditText
         android:id="@+id/mail_txt"
-        android:layout_width="309dp"
+        android:layout_width="305dp"
         android:layout_height="0dp"
-        android:layout_marginTop="231dp"
         android:layout_marginBottom="14dp"
         android:backgroundTint="@color/purple_200"
         android:hint="Correo"
@@ -65,79 +48,104 @@
         android:padding="12dp"
         android:textColor="#252422"
         app:layout_constraintBottom_toTopOf="@+id/pass_txt"
-        app:layout_constraintEnd_toEndOf="@+id/pass_txt"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pass_txt"
+        android:layout_width="305dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="@color/purple_200"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="#252422"
+        app:layout_constraintBottom_toTopOf="@+id/pass_confirm_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mail_txt"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/pass_confirm_txt"
-        android:layout_width="311dp"
+        android:layout_width="305dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginBottom="18dp"
         android:backgroundTint="@color/purple_200"
         android:hint="Confirmar Contraseña"
         android:inputType="textPassword"
         android:padding="12dp"
         android:textColor="#252422"
-        app:layout_constraintBottom_toTopOf="@+id/estoy"
-        app:layout_constraintEnd_toEndOf="@+id/text_errorfield2"
-        app:layout_constraintStart_toStartOf="@+id/text_errorfield2"
+        app:layout_constraintBottom_toTopOf="@+id/text_errorfield2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass_txt"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/estoy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="55dp"
-        android:paddingStart="8dp"
-        android:text="Estoy de acuerdo con los Términos y la Privacidad"
-        android:textColor="#252422"
-        android:textSize="14sp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="374dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/registrar_btn"
-        app:layout_constraintStart_toStartOf="@+id/crear_check"
-        app:layout_constraintTop_toBottomOf="@+id/pass_confirm_txt"
-        tools:ignore="MissingConstraints" />
-
-    <CheckBox
-        android:id="@+id/crear_check"
-        android:layout_width="42dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="235dp"
-        android:buttonTint="#2C6AA8"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/text_errorfield2">
+
+        <CheckBox
+            android:id="@+id/crear_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#2C6AA8"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/estoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="Estoy de acuerdo con los Términos y la Privacidad"
+            android:textColor="#252422"
+            android:textSize="14sp"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/registrar_btn"
-        android:layout_width="247dp"
+        android:layout_width="245dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="141dp"
+        android:layout_marginBottom="29dp"
         android:backgroundTint="@color/green_blue"
         android:fontFamily="sans-serif-medium"
         android:text="Registrar"
         android:textColor="#FFFCF2"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/regvolver_btn"
+        app:layout_constraintEnd_toEndOf="@+id/regvolver_btn"
+        app:layout_constraintStart_toStartOf="@+id/regvolver_btn"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/regvolver_btn"
+        android:layout_width="190dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="93dp"
+        android:backgroundTint="@color/green_blue"
+        android:fontFamily="sans-serif-medium"
+        android:text="Volver"
+        android:textColor="#FFFCF2"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/estoy"
+        app:layout_constraintTop_toBottomOf="@+id/registrar_btn"
         tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="239dp"
-        android:layout_marginBottom="28dp"
-        android:contentDescription="si"
-        app:layout_constraintBottom_toTopOf="@+id/mail_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/circuloej" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

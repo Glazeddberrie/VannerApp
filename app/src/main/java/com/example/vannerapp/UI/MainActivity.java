@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         if (user != null) {
                             String userEmail = user.getEmail();
                             Log.d("Auth", "Usuario autenticado: " + userEmail);
-
+                            error.setText("");
                             checkIfBanned(userEmail);
 
                         }
@@ -84,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkIfBanned(String email) {
+
+        TextView error = findViewById(R.id.text_errorfield);
+
         db.collection("users").whereEqualTo("email", email)
                 .get()
                 .addOnCompleteListener(task -> {
@@ -96,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (isBanned) {
                             Toast.makeText(MainActivity.this, "Este usuario está baneado", Toast.LENGTH_SHORT).show();
+                            error.setText("Este usuario está baneado");
                             auth.signOut();
                         } else {
                             checkIfCompanyBanned(email);
@@ -107,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkIfCompanyBanned(String email) {
+
+        EditText log_email = findViewById(R.id.txt_log_email);
+        EditText log_pass = findViewById(R.id.txt_log_pass);
+
         db.collection("companies").whereEqualTo("email", email)
                 .get()
                 .addOnCompleteListener(task -> {
@@ -122,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
                             auth.signOut();
                         } else {
                             Toast.makeText(MainActivity.this, "Usuario correcto, Bienvenido a Vanner!", Toast.LENGTH_SHORT).show();
+                            log_email.setText("");
+                            log_pass.setText("");
                             Intent intent = new Intent(MainActivity.this, Home.class);
                             intent.putExtra("USER_EMAIL", email);
                             startActivity(intent);

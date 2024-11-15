@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="408dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="389dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="300dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_notificaciones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -21,11 +21,10 @@
         app:srcCompat="@drawable/circulolast"
         tools:ignore="MissingConstraints" />
 
-
     <TextView
         android:id="@+id/vanner_cl"
-        android:layout_width="408dp"
-        android:layout_height="67dp"
+        android:layout_width="357dp"
+        android:layout_height="71dp"
         android:layout_marginBottom="493dp"
         android:gravity="center"
         android:text="Bienvenido al panel de administración de empresas"
@@ -35,10 +34,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.048"
+        app:layout_constraintVertical_bias="0.042"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -73,7 +71,7 @@
         android:id="@+id/btn_enterprise_crear"
         android:layout_width="229dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="166dp"
+        android:layout_marginBottom="270dp"
         android:text="Crear anuncio"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,14 +80,40 @@
 
     <Button
         android:id="@+id/btn_enterprise_manage"
-        android:layout_width="223dp"
+        android:layout_width="229dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="120dp"
         android:text="Administrar anuncios"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_volver"
+        android:layout_width="229dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="44dp"
+        android:text="Volver"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="195dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="499dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gtalogo3_1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

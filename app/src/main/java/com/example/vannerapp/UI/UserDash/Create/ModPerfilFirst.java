@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.vannerapp.R;
+import com.example.vannerapp.UI.MainActivity;
 import com.example.vannerapp.UI.UserDash.Home;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -71,7 +72,7 @@ public class ModPerfilFirst extends AppCompatActivity {
             db.collection("users")
                     .add(userData)
                     .addOnSuccessListener(documentReference -> {
-                        Intent intentHome = new Intent(ModPerfilFirst.this, Home.class);
+                        Intent intentHome = new Intent(ModPerfilFirst.this, MainActivity.class);
                         startActivity(intentHome);
                         finish();
                     })

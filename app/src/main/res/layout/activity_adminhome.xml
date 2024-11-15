@@ -9,84 +9,92 @@
     <TextView
         android:id="@+id/vanner_admin"
         android:layout_width="0dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="22dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="18dp"
         android:text="Bienvenido al panel de administracion"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_crearempresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="411dp"
-        android:layout_height="175dp"
-        android:layout_marginBottom="548dp"
+        android:layout_width="430dp"
+        android:layout_height="186dp"
+        android:layout_marginBottom="21dp"
         android:contentDescription="si"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/circulo_admin" />
-
-    <Button
-        android:id="@+id/btn_crearempresa"
-        android:layout_width="249dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="238dp"
-        android:text="Crear empresa"
+        app:layout_constraintBottom_toTopOf="@+id/vanner_admin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_crearadmin"
-        android:layout_width="249dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="297dp"
-        android:text="Crear administrador"
-        app:layout_constraintEnd_toEndOf="@+id/btn_crearempresa"
-        app:layout_constraintStart_toStartOf="@+id/btn_crearempresa"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_verusuario"
-        android:layout_width="249dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="412dp"
-        android:text="Ver usuarios"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_crearadmin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_crearadmin" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circulo_admin" />
 
     <Button
         android:id="@+id/btn_banearusuario"
         android:layout_width="249dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="476dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="41dp"
         android:text="Borrar usuarios"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_verusuario"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_verusuario" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verusuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crearadmin" />
+
+    <Button
+        android:id="@+id/btn_verusuario"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="133dp"
+        android:text="Ver usuarios"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_banearusuario" />
+
+    <Button
+        android:id="@+id/btn_crearempresa"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="49dp"
+        android:text="Crear empresa"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_crearadmin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanner_admin" />
+
+    <Button
+        android:id="@+id/btn_crearadmin"
+        android:layout_width="249dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="60dp"
+        android:text="Crear administrador"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_banearusuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crearempresa" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="249dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="135dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="88dp"
         android:text="Volver"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_verusuario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

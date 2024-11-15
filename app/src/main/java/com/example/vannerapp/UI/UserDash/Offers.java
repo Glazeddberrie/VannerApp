@@ -40,11 +40,13 @@ public class Offers extends AppCompatActivity {
         TextView sueldoOferta = findViewById(R.id.txt_sueldoOferta);
         Button btnAceptar = findViewById(R.id.btn_aceptarOferta);
         Button btnRechazar = findViewById(R.id.btn_rechazarOferta);
+        Button btnVolver = findViewById(R.id.button3);
 
         txtTitulo.setText(descripcion);
         sueldoOferta.setText("Sueldo: " + sueldo);
         nombreOferta.setText("Empresa: " + empresa);
 
+        btnVolver.setOnClickListener(v -> finish());
 
         validateAnuncio(descripcion, empresa);
     }

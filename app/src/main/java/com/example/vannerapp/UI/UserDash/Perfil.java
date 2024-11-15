@@ -43,6 +43,8 @@ public class Perfil extends AppCompatActivity {
 
         retrieveUserData(AuthMail);
 
+        btn_volver.setOnClickListener(v -> finish());
+
         btn_editPerfil.setOnClickListener(v -> {
             Intent intentEdit = new Intent(Perfil.this, ModPerfil.class);
             intentEdit.putExtra("AuthMail", AuthMail);

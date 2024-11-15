@@ -8,67 +8,73 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="406dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="196dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="47dp"
         android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         android:text="Banear usuario"
-        android:textAlignment="center"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_banear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="408dp"
-        android:layout_height="172dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="410dp"
+        android:layout_height="140dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="548dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="si"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/circulo_admin" />
 
     <EditText
         android:id="@+id/txt_banear"
-        android:layout_width="294dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="568dp"
+        android:layout_width="301dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="41dp"
         android:ems="10"
         android:hint="Ingrese mail a banear"
         android:inputType="text"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_banear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="193dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="408dp"
-        android:text="Volver"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="108dp" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/btn_banear"
-        android:layout_width="193dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="464dp"
+        android:layout_width="240dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="5dp"
         android:text="Banear"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_banear" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="240dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="343dp"
+        android:text="Volver"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button12"
-        app:layout_constraintStart_toStartOf="@+id/button12" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_banear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
